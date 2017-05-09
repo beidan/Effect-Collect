@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Title</title>
+	<meta name="viewport"
+	      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no">
+	<meta name="format-detection" content="telephone=no">
+	<meta http-equiv="x-dns-prefetch-control" content="on">
+	<style>
+		.music {
+			position: absolute;
+			top: 10px;
+			right: 10px;
+			width: 50px;
+			height: 37px;
+			background-color: red;
+		}
+	</style>
+</head>
+<body>
+
+<div class="music" id="J_music"></div>
+<audio src="1.mp3" id="music_simulate" autoplay preload loop="loop" style="display: none"></audio>
+
+<script>
+	/*
+	 参数说明
+	 src: 音频url，
+	 id: 模拟audio，
+	 contain: 控制音乐暂停的按钮
+	 * */
+	var config = {
+		'src': '1.mp3',
+		'id': 'music_simulate',
+		'contain': 'J_music'
+	}
+	var music = new Music(config);
+	music.init();
+</script>
+</body>
+</html>
