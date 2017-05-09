@@ -17,7 +17,7 @@
             num = msg.querySelectorAll('li').length,
             i = 0;
 
-        function animate() {
+        function roll() {
             var which = i % num, cssText, _dur;
             if (i === num) {
                 i = 0;
@@ -32,11 +32,11 @@
             msg.style.cssText = cssText;
             i++;
             setTimeout(function () {
-                animate();
+                roll();
             }, _dur * 1000);
         }
 
-        animate();
+        roll();
     }
 
     window.Roll = Roll;
