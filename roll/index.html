@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Title</title>
+	<meta name="viewport"
+	      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no">
+	<meta name="format-detection" content="telephone=no">
+	<meta http-equiv="x-dns-prefetch-control" content="on">
+	<style>
+		.roll {
+			overflow: hidden;
+			height: 60px;
+		}
+
+		.roll_list {
+			position: relative;
+			padding-left: 10px;
+			margin: 0;
+		}
+
+		.roll_list_item {
+			height: 60px;
+			line-height: 60px;
+		}
+
+		.roll_list_text {
+			height: 60px;
+			text-overflow: ellipsis;
+			overflow: hidden;
+			box-sizing: border-box;
+			position: relative;
+			display: inline-block;
+			max-width: 100%;
+			padding-right: 30px;
+			color: #333;
+		}
+	</style>
+</head>
+<body>
+
+<!--广告滚动-->
+<div class="roll">
+	<ul class="roll_list">
+		<li class="roll_list_item">
+			<a href="#" class="roll_list_text">
+				1消息消息消息消息消息消息1消息消息消息消息消息消息
+			</a>
+		</li>
+		<li class="roll_list_item">
+			<a href="#" class="roll_list_text">
+				2消息消息消息消息1消息消息消息消息消息消息
+			</a>
+		</li>
+		<li class="roll_list_item">
+			<a href="#" class="roll_list_text">
+				3消息消息消息消息消息消息1消息消息消息消息消息消息
+			</a>
+		</li>
+		<li class="roll_list_item">
+			<a href="#" class="roll_list_text">
+				4消息消息消息消息消息消息1消息消息消息消息消息消息
+			</a>
+		</li>
+		<li class="roll_list_item">
+			<a href="#" class="roll_list_text">
+				1消息消息消息消息消息消息1消息消息消息消息消息消息
+			</a>
+		</li>
+	</ul>
+</div>
+
+<script src="index.js"></script>
+<script>
+	/*
+	 * 接收参数
+	 * 1. target 滚动列表的最外层，比如该例子的ul的类名
+	 * 2. time 每一个列表项停留时间，单位秒
+	 * 3. hei  每一个列表的高度
+	 *
+	 * 注意：该列表项最后一项必须与第一项一致,列表项使用ul，li
+	 * */
+	new Roll('roll_list', 3, 60);
+</script>
+</body>
+</html>
